@@ -1,0 +1,37 @@
+{
+  "name": "CoinList",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug",
+    "postinstall": "sed -i '' 's/#import <RCTAnimation\\/RCTValueAnimatedNode.h>/#import \"RCTValueAnimatedNode.h\"/' ./node_modules/react-native/Libraries/NativeAnimation/RCTNativeAnimatedNodesManager.h"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.1.5",
+    "axios": "^0.18.0",
+    "lodash": "^4.17.11",
+    "react": "16.4.1",
+    "react-native": "0.56.0",
+    "react-native-charts-wrapper": "^0.5.0",
+    "react-native-fast-image": "^5.1.1",
+    "react-native-linear-gradient": "^2.4.4",
+    "react-native-navigation": "^2.0.2641",
+    "react-native-render-html": "^3.10.0",
+    "react-native-search-filter": "^0.1.4",
+    "react-native-webview": "git+https://github.com/react-native-community/react-native-webview.git",
+    "react-redux": "^5.1.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-jest": "23.6.0",
+    "babel-preset-react-native": "5.0.2",
+    "jest": "23.6.0",
+    "react-test-renderer": "16.4.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
